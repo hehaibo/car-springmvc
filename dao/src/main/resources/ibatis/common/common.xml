@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+<sqlMap namespace="COMMON">
+	<sql id="PAGE_START">
+		<dynamic>
+			<isNotNull property="limit">
+				<![CDATA[
+				 select * from (
+			 	select rownum rn,t.* from(
+				]]>
+			</isNotNull>
+		</dynamic>
+	</sql>
+
+	<sql id="PAGE_END">
+		<dynamic>
+			<isNotNull property="limit">
+			<![CDATA[
+				) t where rownum<#start#+#limit#
+			) where rn>#start#
+			]]>
+			</isNotNull>
+		</dynamic>
+	</sql>
+	<sql id="PAGE_COUNT_START">
+		<dynamic>
+			<isNotNull property="limit">
+				<![CDATA[
+				select count(*) from (
+				]]>
+			</isNotNull>
+		</dynamic>
+	</sql>
+	<sql id="PAGE_COUNT_END">
+		<dynamic>
+			<isNotNull property="limit">
+				<![CDATA[
+				) 
+			]]>
+			</isNotNull>
+		</dynamic>
+	</sql>
+
+</sqlMap> 

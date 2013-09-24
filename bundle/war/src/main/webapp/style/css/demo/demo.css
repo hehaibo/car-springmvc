@@ -1,0 +1,287 @@
+/*header*/
+body{ 
+    margin:0px; 
+	padding:0px;
+	font-family:Arial, Helvetica, sans-serif;}
+	
+.header{
+	background-color:#ffffff;
+	width:100%;
+	-moz-box-shadow:1px 3px 3px #cdcdcd;
+   -webkit-box-shadow:1px 3px 3px #cdcdcd;
+   box-shadow:1px 3px 3px #cdcdcd;
+	}
+	
+*+html .header{
+	height:65px;
+	}
+	
+.head{
+	font-size:12px;
+	text-decoration:none;
+	width:100%;
+	margin:0px auto 0px auto;
+	line-height:27px;
+	background-color:#eeeeee;
+	}
+	
+.head ul{
+    padding:0px;
+	height:27px;
+	margin:0px auto 0px auto;
+	float:none;
+	text-indent:10px;}
+	
+.head li,.head li a{
+	list-style-type:none;
+	float:left;
+	color:#333333;
+	text-decoration:none;
+	margin:auto 5px auto auto}
+	
+.head li a:hover{
+	color:#f65703;}
+	
+.headbg{
+	background:url(http://dwstyle.b2b.alibaba-inc.com/images/dwpIndex/headbg_inner.png);}
+	
+.menu{
+	background-repeat:repeat-x;
+	height:38px;
+	width:100%;
+	line-height:38px;
+	font-size:14px;}
+	
+.menu ul{
+    padding:0px;
+	margin:auto;
+	float: none;}
+	
+.menu dl, .menu dd{
+	height:32px;
+	display:block;
+	float:left;
+	padding:0 0 0 8px;
+	width:90px;
+	}
+
+.menu dl{
+	margin:0 0px 0 10px;
+	}
+.menu dd{
+	margin:0 10px 0 0px;
+	}
+	
+.menu .liston{
+	background-repeat:no-repeat;
+	background-position:-3000px -3000px;
+	}
+	
+.menu .liston:hover,.menu .liston_select{
+	background-position:-99px -435px;
+	}
+	
+.menu li{ 
+    float:left;
+	padding:0 12px 0 12px;
+	margin:3px 0 0 0px;
+	list-style-type:none;
+	line-height:35px;
+	color:#FFF;
+	font-weight:bold;}
+	
+.menu li a{
+	color:#fff;
+	text-decoration:none;}
+
+.menu .selected{
+	width:76px;
+	color:#1970da;
+	display:block;
+	margin-top:5px;
+	line-height:30px;
+	text-align:center;
+	background-position:-121px -384px;}
+	
+.menu span,.menu span a{
+	float:right;
+	color:#FFF;
+	text-decoration:none;
+	font-weight:bold;}
+	
+*html .menu span,.menu span a{
+	float:right;
+	color:#FFF;
+	text-decoration:none;
+	font-weight:bold;
+	margin:-36px auto;}
+	
+.logo{ 
+    float:left; 
+	width:180px; 
+	height:38px;
+	background-position:-23px -42px;
+	cursor:pointer;
+	margin:0px 0px 0px 15px;}
+
+.menugray,menugray a{
+	color:#e0e0e0 !important;}
+
+.exit{ float:none !important;}
+
+/*Unknow*/
+.msg .x-box-mc{font-size:14px;}
+#msg-div {position:absolute;left:35%;top:10px;width:250px;z-index:20000;}
+.cursor-pointer{cursor:pointer;}
+
+/**anchor styke**/
+a { color:#1111cc; text-decoration:none; cursor:pointer;}
+a:hover { text-decoration:none;}
+a.mr{ margin-right:10px;}
+a.pl{ padding-left:20px;}
+
+/*FF font-size reset*/
+.x-window-footer {position:relative;top:0;right:0;}
+.x-tab-strip SPAN.x-tab-strip-text{font-size:12px;}
+.x-panel-header{font-size:12px;}
+.x-tree-node{font-size:12px;}
+.x-grid3-hd-row TD{font-size:12px; *font:normal 11px arial,tahoma,helvetica,sans-serif;}
+.x-grid3-row TD{font-size:12px; *font:normal 11px arial,tahoma,helvetica,sans-serif; LINE-HEIGHT: 16px; *LINE-HEIGHT: 13px;}
+.x-tip .x-tip-bd{font-size:12px;}
+.x-tip h3{font-size:12px;}
+.x-tip .x-tip-bd-inner{font-size:12px;}
+.x-panel-tl .x-panel-header{font:normal 12px tahoma, arial, verdana, sans-serif;}
+.x-form-field{font: 12px tahoma, arial, helvetica, sans-serif}
+.x-small-editor .x-form-field{font: 12px tahoma, arial, helvetica, sans-serif}
+.x-combo-list-item{font:12px tahoma, arial, helvetica, sans-serif;}
+.x-menu-list-item{font: 12px tahoma, arial, sans-serif;}
+.x-window-tl .x-window-header{font: bold 12px tahoma, arial, verdana, sans-serif;}
+.x-form-item{font:12px tahoma, arial, helvetica, sans-serif}
+.x-grid-group-hd DIV{font:bold 12px tahoma, arial, helvetica, sans-serif; *font:bold 11px tahoma,arial,helvetica,sans-serif;} .x-btn-text-icon .x-btn-center .x-btn-text {ext-all .css (line 227) background-position:0pt2px; background-repeat: no-repeat; padding: 3px 0pt 2px 18px;}
+.ext-gecko .x-btn button{ext-all .css (line 222) padding-left:0pt; padding-right: 0pt;}
+.x-btn button{font-size:12px;}
+div.xtb-text{font-size:12px;}
+
+/*extjs bug fix style*/
+.x-treegrid-text{white-space:nowrap;width:100%;}
+.x-selectable, .x-selectable * {
+        -moz-user-select: text! important ;
+        -khtml-user-select: text! important ;
+}
+.x-treegrid-root-node {
+overflow: auto !important;
+}
+
+/*password field margin*/
+.ext-field-margin {margin: 0px 0px 5px 0px;}
+
+/*New add*/
+.load{position:absolute;top:30px;right:10px;font-size:12px;color:#15428B;background:#fff;padding:3px;border:1px solid #ccc;display:none;}
+/*Help Page*/
+.help_list,.pagination{border-bottom: 1px dotted #AAAAAA;display: block;overflow: hidden;padding: 7px;}
+.help_list h3 a{font:700 14px/25px "宋体";margin:0;}
+.help_list li{font:100 12px/25px "宋体";margin:0;}
+.help_list p{margin:0;font-size:12px;line-height: 22px;}
+.pagination{font-size:12px;}
+.blue {color: #416AA3;text-decoration: none;}
+/*text*/
+.page_text{color:red; font-size:12px;}
+.clew_text{color:green; font-size:12px;}
+
+/** button skin **/
+.test_toolbar{color:#FFFFFF}
+
+/** loading bar **/
+#loading-div {
+	position : absolute;
+	right : 0px;
+	bottom : 3px;
+	width : 170px;
+	height : 20px;
+	z-index : 2000
+}
+		
+#loading-div .msg {
+	background-color: #F2F2F2;
+	padding : 2px 8px 2px 8px;
+	background-image : url("http://dwstyle.b2b.alibaba-inc.com/images/tianxuan/loading.gif");
+	background-position : 100px center;
+	background-repeat : no-repeat;
+	line-height : 16px;
+	font-size : 12px;
+}
+
+.flow-about {
+	background-image : url("../../images/biap/about.png");
+	width: 34px;
+	height: 248px;
+}
+
+.flow-pass {
+	background-image : url("../../images/biap/pass.png");
+	width: 34px;
+	height: 169px;
+}
+.flow-passing {
+	background-image : url("../../images/biap/passing.png");
+	width: 34px;
+	height: 169px;
+}
+.flow-nopass {
+	background-image : url("../../images/biap/nopass.png");
+	width: 34px;
+	height: 169px;
+}
+.flow-notpassed {
+	background-image : url("../../images/biap/notpassed.png");
+	width: 34px;
+	height: 169px;
+}
+.shadow-pass {
+	border: 1px solid #b5d3b5;
+	background-color: #FFFFFF;
+    background-image: -moz-linear-gradient(top , #d9eed9, #FFFFFF);
+	background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d9eed9), color-stop(100%, #FFFFFF));
+	background-image:-webkit-linear-gradient(top, #d9eed9,#FFFFFF);
+	background-image:-o-linear-gradient(top, #d9eed9,#FFFFFF);
+	background-image:-ms-linear-gradient(top, #d9eed9,#FFFFFF);
+	background-image:linear-gradient(top, #d9eed9,#FFFFFF);
+}
+.shadow-passing {
+	border: 1px solid #eebbbb;
+	background-color: #FFFFFF;
+    background-image: -moz-linear-gradient(center top , #f5e0e0, #FFFFFF);
+	background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f5e0e0), color-stop(100%, #FFFFFF));
+	background-image:-webkit-linear-gradient(top, #f5e0e0,#FFFFFF);
+	background-image:-o-linear-gradient(top, #f5e0e0,#FFFFFF);
+	background-image:-ms-linear-gradient(top, #f5e0e0,#FFFFFF);
+	background-image:linear-gradient(top, #f5e0e0,#FFFFFF);
+}
+.shadow-nopass {
+	border: 1px solid #c3c3c3;
+	background-color: #FFFFFF;
+    background-image: -moz-linear-gradient(center top , #e2e1e1, #FFFFFF, #FFFFFF);
+	background-image:-webkit-linear-gradient(top, #e2e1e1, #FFFFFF,#FFFFFF);
+	background-image:-o-linear-gradient(top, #e2e1e1, #FFFFFF,#FFFFFF);
+	background-image:-ms-linear-gradient(top, #e2e1e1, #FFFFFF,#FFFFFF);
+	background-image:linear-gradient(top, #e2e1e1, #FFFFFF,#FFFFFF);
+}
+.shadow-notpassed {
+	border: 1px solid #ecc7aa;
+	background-color: #FFFFFF;
+    background-image: -moz-linear-gradient(center top , #fde7d6, #FFFFFF, #FFFFFF);
+	background-image:-webkit-linear-gradient(top, #fde7d6, #FFFFFF,#FFFFFF);
+	background-image:-o-linear-gradient(top, #fde7d6, #FFFFFF,#FFFFFF);
+	background-image:-ms-linear-gradient(top, #fde7d6, #FFFFFF,#FFFFFF);
+	background-image:linear-gradient(top, #fde7d6, #FFFFFF,#FFFFFF);
+}
+.approval .x-panel-body-default {
+	background: none;
+    border-style: none;
+    border-width: 0;
+}
+.applyinfo .x-panel-body-default {
+	background: none;
+    border-style: none;
+    border-width: 0;
+}

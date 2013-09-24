@@ -1,0 +1,99 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.hhb</groupId>
+		<artifactId>car.all</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<artifactId>car.depoly</artifactId>
+	<packaging>jar</packaging>
+	<name>car Deploy</name>
+	<dependencies>
+		<dependency>
+			<groupId>com.hhb</groupId>
+			<artifactId>car.bundle.war</artifactId>
+			<scope>runtime</scope>
+			<version>${project.version}</version>
+			<type>war</type>
+		</dependency>
+	</dependencies>
+	
+	<properties>
+		<appName>car</appName>
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.6</version>
+				<executions>
+					<execution>
+						<id>prepare-deploy-package</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<!-- project.build.directory -->
+								<mkdir dir="${binconf_directory}" />
+								<mkdir dir="${war_directory}"/>
+							</tasks>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.1</version>
+				<executions>
+					<execution>
+						<id>copy-war</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>com.hhb</groupId>
+									<artifactId>${appName}.bundle.war</artifactId>
+									<version>${project.version}</version>
+									<type>war</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>D:/dev/apache-tomcat-6.0.29/webapps</outputDirectory>
+									<destFileName>${war_filename}</destFileName>
+								</artifactItem>
+							</artifactItems>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	<profiles>
+	
+	<profile>
+		<id>dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+				<property>
+					<name>env</name>
+					<value>!release</value>
+				</property>
+			</activation>
+			<properties>
+				<binconf_directory>${project.build.directory}/dev/web-deploy</binconf_directory>
+				<war_directory>${binconf_directory}/war</war_directory>
+				<war_filename>${appName}.war</war_filename>
+			</properties>
+	</profile>
+	</profiles>
+</project>
+	
+	

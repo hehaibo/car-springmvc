@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+<sqlMap namespace="demo">
+	<typeAlias alias="demo" type="com.hhb.demo.model.Demo" />
+	<typeAlias alias="paginator" type="com.hhb.common.page.Paginator" />
+
+	<resultMap id="demoResultMap" class="demo">
+		<result property="id" column="id" />
+		<result property="name" column="name" />
+		<result property="remark" column="remark" />
+	</resultMap>
+	<insert id="insertDemo" parameterClass="demo">
+		<selectKey keyProperty="id" resultClass="java.lang.Long"
+			type="post">
+			select last_insert_id()
+		</selectKey>
+		<![CDATA[
+			insert into demo (name,remark)
+			values(#name#,#remark#)
+		]]>
+	</insert>
+	<update id="updateDemo" parameterClass="demo">
+		<![CDATA[
+			update demo 
+			set name =#name#,
+			remark=#remark#
+			where id=#id#
+		]]>
+	</update>
+
+	<delete id="deleteDemo" parameterClass="demo">
+		<![CDATA[
+			delete from demo where id=#id#		
+		]]>
+	</delete>
+
+	<delete id="deleteDemoById" parameterClass="java.lang.Long">
+		<![CDATA[
+			delete from demo where id=#id#		
+		]]>
+	</delete>
+
+	<select id="selectDemoList" resultMap="demoResultMap">
+		select
+		id,
+		name ,
+		remark
+		from
+		demo
+    </select>
+    
+    <select id="selectDemo" resultClass="demo" parameterClass="demo">
+		select id,
+		name ,
+		remark
+		from demo
+		<dynamic prepend="where">
+			<isNotEmpty prepend="and" property="id">
+				id=#id#
+			</isNotEmpty>
+			<isNotEmpty prepend="and" property="name">
+				name=#name#
+			</isNotEmpty>
+		</dynamic>
+		
+    </select>
+    
+	<select id="selectDemoById" resultClass="demo" parameterClass="java.lang.Long">
+		select id,
+		name ,
+		remark
+		from demo where id=#id#
+    </select>
+    
+    <select id="selectDemoByName" resultClass="java.util.HashMap" parameterClass="java.lang.Long">
+		select id,
+		name ,
+		remark
+		from demo where id=#id#
+    </select>
+</sqlMap> 

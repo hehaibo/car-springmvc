@@ -1,0 +1,53 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>com.hhb</groupId>
+		<artifactId>car.all</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>../../pom.xml</relativePath>
+	</parent>
+	<!-- 配置打成war -->
+	<artifactId>car.bundle.war</artifactId>
+	<name>car Bundle War</name>
+	<packaging>war</packaging>
+	<version>1.0.0-SNAPSHOT</version>	
+	
+		<!--工程依赖开始-->
+	<dependencies>
+		<dependency>
+			<groupId>com.hhb</groupId>
+			<artifactId>car.dao</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.hhb</groupId>
+			<artifactId>car.common.utils</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.hhb</groupId>
+			<artifactId>car.biz</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.hhb</groupId>
+			<artifactId>car.web.common</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.hhb</groupId>
+			<artifactId>car.web</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.hhb</groupId>
+			<artifactId>car.config</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+			<!--工程依赖结束-->
+	</dependencies>
+
+</project>
+	
