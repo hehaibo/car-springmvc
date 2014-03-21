@@ -1,0 +1,17 @@
+<? xml version="1.0" charset="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.hehaibo.org" xmlns="http://www.hehaibo.org"
+elementFormDefault="qualified">
+
+	<xs:element name="note">
+		<xs:complexType>
+			<!--xs:sequence的意义，是指里面包含的元素  在XML中必须按照定义的顺序出现-->
+			<xs:sequence>
+				<xs:element name="to" type="xs:string"/>
+				<xs:element name="from" type="xs:string"/>
+				<xs:element name="heading" type="xs:string"/>
+				<xs:element name="body" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
